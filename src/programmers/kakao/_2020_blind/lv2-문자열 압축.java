@@ -1,7 +1,7 @@
 package programmers.kakao._2020_blind;
 
 class Solution {
-    public static int solution(String s) {
+    public int solution(String s) {
         String minStr = s;
 
         // 모든 단위길이에 대해 압축 시도
@@ -32,10 +32,4 @@ class Solution {
 
         return minStr.length();
     }
-
-    public static void main(String[] args) {
-        int ans = solution("aabbaccc");
-        System.out.println(ans);
-    }
-
 }
