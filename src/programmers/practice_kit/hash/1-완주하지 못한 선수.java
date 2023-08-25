@@ -4,8 +4,8 @@ import java.util.*;
 
 class Solution {
     public String solution(String[] participant, String[] completion) {
-        String answer = "";
         Map<String, Integer> nameCountMap = new HashMap<>();
+        String answer = "";
 
         // dic[key] += 1 할때 keyError를 방지하려면 이렇게 씀
         for (String p : participant) {
