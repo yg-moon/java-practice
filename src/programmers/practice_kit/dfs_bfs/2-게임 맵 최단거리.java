@@ -16,14 +16,10 @@ class Solution {
         bfs(maps, visited);
 
         int answer = visited[m - 1][n - 1];
-        if (answer != 0) {
-            return answer;
-        } else {
-            return -1;
-        }
+        return (answer == 0) ? -1 : answer;
     }
 
-    // 자바에서 BFS 구현하는 방법
+    // 자바의 BFS 구현
     private void bfs(int[][] maps, int[][] visited) {
         visited[0][0] = 1;
         Queue<int[]> queue = new LinkedList<>();
