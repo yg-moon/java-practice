@@ -3,6 +3,7 @@ package programmers.practice_kit.brute_force;
 import java.util.*;
 
 class Solution {
+    // 자바: 그래프 선언은 이 스타일이 가장 일반적
     List<Integer>[] tree;
     int cnt;
 
