@@ -4,8 +4,8 @@ import java.util.*;
 
 class Solution {
     public int[] solution(int brown, int yellow) {
-        int area = brown + yellow;
         List<Integer> resultList = new ArrayList<>();
+        int area = brown + yellow;
 
         for (int i = 3; i <= Math.sqrt(area); i++) {
             if (area % i == 0) {

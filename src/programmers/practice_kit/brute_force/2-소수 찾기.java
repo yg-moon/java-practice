@@ -21,7 +21,6 @@ class Solution {
             if (isPrime(num)) {
                 primeSet.add(num);
             }
-
         }
         if (curStr.length() == charArr.length)
             return;
