@@ -19,7 +19,7 @@ class Node implements Comparable<Node> {
 }
 
 public class Q_1753 {
-    static List<List<Node>> graph;
+    static List<Node>[] graph;
     static int[] dist;
     static int V, E, K;
     static final int INF = (int) 1e9;
@@ -32,19 +32,19 @@ public class Q_1753 {
         V = Integer.parseInt(st.nextToken());
         E = Integer.parseInt(st.nextToken());
         K = Integer.parseInt(br.readLine());
-        graph = new ArrayList<>();
+        graph = new ArrayList[V + 1];
         dist = new int[V + 1];
 
         // 초기화
         for (int i = 1; i <= V; i++) {
-            graph.add(new ArrayList<>());
+            graph[i] = new ArrayList<>();
         }
         for (int i = 0; i < E; i++) {
             st = new StringTokenizer(br.readLine());
             int u = Integer.parseInt(st.nextToken());
             int v = Integer.parseInt(st.nextToken());
             int w = Integer.parseInt(st.nextToken());
-            graph.get(u).add(new Node(v, w));
+            graph[u].add(new Node(v, w));
         }
 
         dijkstra(K);
@@ -75,7 +75,7 @@ public class Q_1753 {
             if (dist[curId] < curWeight) {
                 continue;
             }
-            for (Node next : graph.get(curId)) {
+            for (Node next : graph[curId]) {
                 int newWeight = curWeight + next.weight;
                 if (dist[next.id] > newWeight) {
                     dist[next.id] = newWeight;
