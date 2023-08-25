@@ -3,8 +3,8 @@ package programmers.practice_kit.brute_force;
 import java.util.*;
 
 class Solution {
-    private List<Integer>[] tree;
-    private int cnt;
+    List<Integer>[] tree;
+    int cnt;
 
     public int solution(int n, int[][] wires) {
         int answer = Integer.MAX_VALUE;

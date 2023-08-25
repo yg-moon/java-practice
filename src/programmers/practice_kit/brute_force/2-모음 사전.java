@@ -3,8 +3,9 @@ package programmers.practice_kit.brute_force;
 import java.util.*;
 
 class Solution {
-    private final char[] ALPHAS = { 'A', 'E', 'I', 'O', 'U' };
-    private List<String> words = new ArrayList<>();
+    // 굳이 static 키워드가 필요하지 않음
+    final char[] ALPHAS = { 'A', 'E', 'I', 'O', 'U' };
+    List<String> words = new ArrayList<>();
 
     public int solution(String word) {
         dfs(0, "");

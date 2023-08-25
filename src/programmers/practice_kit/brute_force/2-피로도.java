@@ -2,8 +2,8 @@ package programmers.practice_kit.brute_force;
 
 class Solution {
     // visited: set보다는 배열이 성능상 유리
-    static boolean[] visited;
-    static int maxCnt = 0;
+    boolean[] visited;
+    int maxCnt = 0;
 
     public int solution(int k, int[][] dungeons) {
         visited = new boolean[dungeons.length];
