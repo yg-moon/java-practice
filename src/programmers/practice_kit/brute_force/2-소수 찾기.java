@@ -3,9 +3,9 @@ package programmers.practice_kit.brute_force;
 import java.util.*;
 
 class Solution {
-    static Set<Integer> primeSet = new HashSet<>();
-    static boolean[] visited;
-    static char[] charArr;
+    Set<Integer> primeSet = new HashSet<>();
+    boolean[] visited;
+    char[] charArr;
 
     public int solution(String numbers) {
         visited = new boolean[numbers.length()];
