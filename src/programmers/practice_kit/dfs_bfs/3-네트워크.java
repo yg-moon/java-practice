@@ -9,7 +9,7 @@ class Solution {
 
         for (int node = 0; node < n; node++) {
             if (!visited[node]) {
-                dfs(computers, node);
+                dfs(node, computers);
                 networkCnt++;
             }
         }
@@ -17,11 +17,11 @@ class Solution {
         return networkCnt;
     }
 
-    private void dfs(int[][] computers, int i) {
+    private void dfs(int i, int[][] computers) {
         visited[i] = true;
         for (int j = 0; j < computers.length; j++) {
             if (i != j && computers[i][j] == 1 && !visited[j]) {
-                dfs(computers, j);
+                dfs(j, computers);
             }
         }
     }

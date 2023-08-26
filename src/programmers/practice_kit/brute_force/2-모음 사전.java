@@ -8,17 +8,17 @@ class Solution {
     List<String> words = new ArrayList<>();
 
     public int solution(String word) {
-        dfs(0, "");
+        dfs("", 0);
         return words.indexOf(word) + 1;
     }
 
-    private void dfs(int cnt, String w) {
+    private void dfs(String w, int cnt) {
         if (cnt == 5) {
             return;
         }
         for (char alpha : ALPHAS) {
             words.add(w + alpha);
-            dfs(cnt + 1, w + alpha);
+            dfs(w + alpha, cnt + 1);
         }
     }
 }

@@ -13,7 +13,7 @@ class Solution {
             return 0;
         }
 
-        dfs(target, words, begin, 0);
+        dfs(begin, 0, target, words);
 
         return (minStep == Integer.MAX_VALUE) ? 0 : minStep;
     }
@@ -28,14 +28,14 @@ class Solution {
         return diff == 1;
     }
 
-    private void dfs(String target, String[] words, String cur, int step) {
+    private void dfs(String cur, int step, String target, String[] words) {
         if (cur.equals(target)) {
             minStep = Math.min(minStep, step);
         }
         for (String word : words) {
             if (!visited.contains(word) && isChangeable(cur, word)) {
                 visited.add(word);
-                dfs(target, words, word, step + 1);
+                dfs(word, step + 1, target, words);
                 visited.remove(word);
             }
         }
