@@ -12,10 +12,8 @@ class Solution {
             int play = plays[i];
             genreCountMap.put(genre, genreCountMap.getOrDefault(genre, 0) + play);
 
-            // getOrDefault를 못쓰면 이렇게 처리
-            if (!genreInfoMap.containsKey(genre)) {
-                genreInfoMap.put(genre, new ArrayList<>());
-            }
+            // Map이 비어있을 때는 putIfAbsent()
+            genreInfoMap.putIfAbsent(genre, new ArrayList<>());
             List<Integer> info = new ArrayList<>();
             info.add(i);
             info.add(play);
